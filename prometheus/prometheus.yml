@@ -309,5 +309,5 @@ spec:
               labels:
                 severity: critical
               annotations:
-                summary: "Traefik backend down (instance {{ $labels.instance }})
-                description: "All Traefik backends are down\n  VALUE = {{ $value }}\n  LABELS: {{ $labels }}
+                summary: "Traefik backend down (instance {{ $labels.instance }})"
+                description: "All Traefik backends are down\n  VALUE = {{ $value }}\n  LABELS: {{ $labels }}"
