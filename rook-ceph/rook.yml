@@ -1,0 +1,24 @@
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: rook
+  namespace: rook-ceph
+spec:
+  releaseName: rook
+  chart:
+    repository: https://charts.rook.io/release
+    name: rook-ceph
+    version: v1.1.4
+  values:
+    csi:
+      cephcsi:
+        image: jrefi/ceph-csi:latest
+      registrar:
+        image: jrefi/csi-node-driver-registrar:latest
+      provisioner:
+        image: jrefi/csi-provisioner:latest
+      snapshotter:
+        image: jrefi/csi-snapshotter:latest
+      attacher:
+        image: jrefi/csi-attacher:latest
