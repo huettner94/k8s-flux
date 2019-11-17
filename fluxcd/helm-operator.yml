@@ -1,0 +1,16 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: helm-operator
+  namespace: fluxcd
+spec:
+  releaseName: helm-operator
+  chart:
+    repository: https://charts.fluxcd.io
+    name: helm-operator
+    version: 1.0.0-rc3
+  values:
+    image:
+      repository: docker.io/huettner94/helm-operator
+      tag: 1.0.0-rc3-arm64

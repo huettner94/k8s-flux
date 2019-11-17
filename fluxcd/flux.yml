@@ -1,0 +1,20 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: flux
+  namespace: fluxcd
+spec:
+  releaseName: flux
+  chart:
+    repository: https://charts.fluxcd.io
+    name: flux
+    version: 0.15.0
+  values:
+    image:
+      repository: docker.io/huettner94/flux
+      tag: 1.15.0-arm64
+    memcached:
+      tag: "1.5.20"
+    git:
+      url: git@github.com:huettner94/k8s-flux.git
