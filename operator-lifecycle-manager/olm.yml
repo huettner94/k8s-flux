@@ -1,0 +1,12 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: olm
+  namespace: operator-lifecycle-manager
+spec:
+  releaseName: olm
+  chart:
+    git: https://github.com/operator-framework/operator-lifecycle-manager.git
+    ref: 0.12.0
+    path: deploy/chart
