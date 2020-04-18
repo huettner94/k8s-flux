@@ -16,6 +16,6 @@ spec:
       - name: default
         protocol: layer2
         addresses:
-        - 10.0.128.20-10.0.128.25
+        - 192.168.0.14-192.168.0.18
     prometheus:
       scrapeAnnotations: True
