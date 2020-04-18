@@ -14,3 +14,5 @@ spec:
     image:
       repository: docker.io/huettner94/helm-operator
       tag: 1.0.1-arm64
+    helm:
+      versions: v3
