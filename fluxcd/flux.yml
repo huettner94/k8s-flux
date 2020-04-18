@@ -9,12 +9,12 @@ spec:
   chart:
     repository: https://charts.fluxcd.io
     name: flux
-    version: 0.15.0
+    version: 1.3.0
   values:
     image:
       repository: docker.io/huettner94/flux
-      tag: 1.15.0-arm64
+      tag: 1.19.0-arm64
     memcached:
-      tag: "1.5.20"
+      tag: "1.6.5"
     git:
       url: git@github.com:huettner94/k8s-flux.git
