@@ -1,0 +1,27 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: owncloud
+  namespace: owncloud
+spec:
+  releaseName: owncloud
+  chart:
+    repository: https://charts.bitnami.com/bitnami
+    name: owncloud
+    version: 8.1.15
+  values:
+    global:
+      storageClass: rook-ceph-block-high
+    image:
+      repository: owncloud/server
+    ingress:
+      enabled: true
+      hosts:
+        - name: owncloud.apps.huettner.local
+    owncloudHost: owncloud.apps.huettner.local
+    mariadb:
+      enabled: true
+      image:
+        repository: mariadb
+        tag: 10.5.2-bionic
