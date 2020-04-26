@@ -22,3 +22,5 @@ spec:
         image: teanan/csi-snapshotter:v1.2.2
       attacher:
         image: teanan/csi-attacher:v2.1.0
+      resizer:
+        image: teanan/csi-resizer:v0.4.0
