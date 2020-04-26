@@ -15,10 +15,10 @@ spec:
       cephcsi:
         image: quay.io/cephcsi/cephcsi:v2.1.0-arm64
       registrar:
-        image: jrefi/csi-node-driver-registrar:latest
+        image: teanan/csi-node-driver-registrar:v1.2.0
       provisioner:
-        image: jrefi/csi-provisioner:latest
+        image: teanan/csi-provisioner:v1.4.0
       snapshotter:
-        image: jrefi/csi-snapshotter:latest
+        image: teanan/csi-snapshotter:v1.2.2
       attacher:
-        image: jrefi/csi-attacher:latest
+        image: teanan/csi-attacher:v2.1.0
