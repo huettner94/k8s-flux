@@ -13,7 +13,7 @@ spec:
   values:
     csi:
       cephcsi:
-        image: jrefi/ceph-csi:latest
+        image: quay.io/cephcsi/cephcsi:v2.1.0-arm64
       registrar:
         image: jrefi/csi-node-driver-registrar:latest
       provisioner:
