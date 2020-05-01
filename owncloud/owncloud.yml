@@ -14,8 +14,8 @@ spec:
     global:
       storageClass: rook-ceph-block-high
     image:
-      repository: owncloud/server
-      tag: 10.4.1
+      repository: huettner94/bitnami-owncloud
+      tag: 10.4.1-debian-10-r3
     ingress:
       enabled: true
       hosts:
@@ -24,5 +24,5 @@ spec:
     mariadb:
       enabled: true
       image:
-        repository: mariadb
-        tag: 10.5.2-bionic
+        repository: huettner94/bitnami-mariadb
+        tag: 10.4.12-debian-10-r88
